@@ -17,10 +17,10 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "product")
+@Entity
+@Table(name = "products")
 public class ProductEntity {
 
     @Id
@@ -28,6 +28,7 @@ public class ProductEntity {
     private Long id;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "product_type")
     private ProductType productType;
 
     @Column(name = "name")

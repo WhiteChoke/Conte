@@ -1,0 +1,12 @@
+package com.whitechoke.productservice.domain;
+
+
+import com.whitechoke.productservice.api.dto.ProductFilterDto;
+import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
+import com.whitechoke.productservice.api.dto.ProductRequestDto;
+import com.whitechoke.productservice.api.dto.ProductResponseDto;
+
+public interface ProductService {
+    ProductFilterResponseDto getProductByFilter(ProductFilterDto filter);
+    ProductResponseDto createProduct(ProductRequestDto request);
+}
