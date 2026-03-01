@@ -9,4 +9,5 @@ import com.whitechoke.productservice.api.dto.ProductResponseDto;
 public interface ProductService {
     ProductFilterResponseDto getProductByFilter(ProductFilterDto filter);
     ProductResponseDto createProduct(ProductRequestDto request);
+    void deleteProductById(Long id);
 }

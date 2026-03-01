@@ -8,6 +8,7 @@ import com.whitechoke.productservice.domain.ProductService;
 import com.whitechoke.productservice.domain.ProductValidate;
 import com.whitechoke.productservice.domain.db.ProductMapper;
 import com.whitechoke.productservice.domain.db.ProductRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -61,5 +62,12 @@ public class ProductServiceImpl implements ProductService {
         var created = repository.save(entity);
 
         return mapper.toResponseDto(created);
+    }
+
+    @Override
+    public void deleteProductById(Long id) {
+        var found = repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Not found product with id=" + id));
+        repository.delete(found);
     }
 }
