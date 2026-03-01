@@ -1,11 +1,11 @@
 package com.whitechoke.productservice.domain;
 
 
-import com.whitechoke.productservice.api.dto.ProductFilterDto;
-import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
-import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
-import com.whitechoke.productservice.api.dto.ProductResponseDto;
-import com.whitechoke.productservice.api.dto.ProductUpdateRequestDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductFilterDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductFilterResponseDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductResponseDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductUpdateRequestDto;
 
 public interface ProductService {
     ProductFilterResponseDto getProductByFilter(ProductFilterDto filter);

@@ -1,6 +1,6 @@
-package com.whitechoke.productservice.api.dto;
+package com.whitechoke.productservice.api.dto.productDto;
 
-import com.whitechoke.productservice.domain.db.ProductType;
+import com.whitechoke.productservice.domain.db.product.ProductType;
 
 import java.math.BigDecimal;
 

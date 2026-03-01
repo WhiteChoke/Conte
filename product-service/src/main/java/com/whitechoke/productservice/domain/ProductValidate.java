@@ -1,7 +1,7 @@
 package com.whitechoke.productservice.domain;
 
-import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
-import com.whitechoke.productservice.api.dto.ProductDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductDto;
 import org.mapstruct.ap.shaded.freemarker.template.utility.NullArgumentException;
 import org.springframework.stereotype.Component;
 

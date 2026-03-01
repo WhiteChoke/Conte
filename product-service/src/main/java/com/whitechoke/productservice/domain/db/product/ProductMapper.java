@@ -1,7 +1,7 @@
-package com.whitechoke.productservice.domain.db;
+package com.whitechoke.productservice.domain.db.product;
 
-import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
-import com.whitechoke.productservice.api.dto.ProductResponseDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductResponseDto;
 import org.mapstruct.Mapper;
 
 import org.mapstruct.MappingConstants;

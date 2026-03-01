@@ -1,4 +1,4 @@
-package com.whitechoke.productservice.domain.db;
+package com.whitechoke.productservice.domain.db.product;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

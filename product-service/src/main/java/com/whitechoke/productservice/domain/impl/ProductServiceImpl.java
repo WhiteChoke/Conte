@@ -1,14 +1,14 @@
 package com.whitechoke.productservice.domain.impl;
 
-import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
-import com.whitechoke.productservice.api.dto.ProductFilterDto;
-import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
-import com.whitechoke.productservice.api.dto.ProductResponseDto;
-import com.whitechoke.productservice.api.dto.ProductUpdateRequestDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductFilterDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductFilterResponseDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductResponseDto;
+import com.whitechoke.productservice.api.dto.productDto.ProductUpdateRequestDto;
 import com.whitechoke.productservice.domain.ProductService;
 import com.whitechoke.productservice.domain.ProductValidate;
-import com.whitechoke.productservice.domain.db.ProductMapper;
-import com.whitechoke.productservice.domain.db.ProductRepository;
+import com.whitechoke.productservice.domain.db.product.ProductMapper;
+import com.whitechoke.productservice.domain.db.product.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;

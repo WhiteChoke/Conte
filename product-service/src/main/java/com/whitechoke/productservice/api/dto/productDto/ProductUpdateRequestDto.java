@@ -1,4 +1,4 @@
-package com.whitechoke.productservice.api.dto;
+package com.whitechoke.productservice.api.dto.productDto;
 
 import java.math.BigDecimal;
 
