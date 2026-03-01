@@ -4,6 +4,7 @@ import com.whitechoke.productservice.api.dto.ProductFilterDto;
 import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
 import com.whitechoke.productservice.api.dto.ProductRequestDto;
 import com.whitechoke.productservice.api.dto.ProductResponseDto;
+import com.whitechoke.productservice.api.dto.ProductUpdateRequestDto;
 import com.whitechoke.productservice.domain.ProductService;
 import com.whitechoke.productservice.domain.ProductValidate;
 import com.whitechoke.productservice.domain.db.ProductMapper;
@@ -22,6 +23,7 @@ public class ProductServiceImpl implements ProductService {
     private final ProductMapper mapper;
     private final ProductValidate productValidate;
 
+    @Override
     public ProductFilterResponseDto getProductByFilter(ProductFilterDto filter) {
 
         var pageNumber = filter.pageNumber() != null
@@ -51,6 +53,7 @@ public class ProductServiceImpl implements ProductService {
 
     }
 
+    @Override
     @Transactional
     public ProductResponseDto createProduct(ProductRequestDto request) {
 
@@ -65,9 +68,24 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public void deleteProductById(Long id) {
         var found = repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Not found product with id=" + id));
         repository.delete(found);
+    }
+
+    @Override
+    @Transactional
+    public ProductResponseDto updateProduct(Long id, ProductUpdateRequestDto request) {
+
+        var found = repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Not found product with id=" + id));
+
+        found.setName(request.name());
+        found.setDescription(request.description());
+        found.setBasePrice(request.basePrice());
+
+        return mapper.toResponseDto(found);
     }
 }

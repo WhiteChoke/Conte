@@ -11,7 +11,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
         SELECT p FROM ProductEntity p
                 WHERE (:id IS NULL OR p.id = :id)
                 AND (:productType IS NULL OR p.productType = :productType)
-                AND (:isAvailable IS NULL OR p.id = :isAvailable)
+                AND (:isAvailable IS NULL OR p.isAvailable = :isAvailable)
         """)
     Page<ProductEntity> getProductByFilter(@Param("id") Long id,
                                            @Param("productType") ProductType productType,
