@@ -6,7 +6,7 @@ import lombok.Builder;
 public record VariantFilterDto(
         Long id,
         Integer size,
-        Integer productId,
+        Long productId,
         Integer pageSize,
         Integer pageNumber
 ) {
