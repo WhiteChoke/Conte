@@ -1,8 +1,8 @@
 package com.whitechoke.productservice.domain.impl;
 
+import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
 import com.whitechoke.productservice.api.dto.ProductFilterDto;
 import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
-import com.whitechoke.productservice.api.dto.ProductRequestDto;
 import com.whitechoke.productservice.api.dto.ProductResponseDto;
 import com.whitechoke.productservice.api.dto.ProductUpdateRequestDto;
 import com.whitechoke.productservice.domain.ProductService;
@@ -55,7 +55,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public ProductResponseDto createProduct(ProductRequestDto request) {
+    public ProductResponseDto createProduct(ProductCreateRequestDto request) {
 
         productValidate.validateRequest(request);
 
@@ -78,6 +78,8 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public ProductResponseDto updateProduct(Long id, ProductUpdateRequestDto request) {
+
+        productValidate.validateRequest(request);
 
         var found = repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Not found product with id=" + id));

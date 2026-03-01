@@ -6,5 +6,5 @@ public record ProductUpdateRequestDto(
         String name,
         BigDecimal basePrice,
         String description
-) {
+) implements ProductDto {
 }

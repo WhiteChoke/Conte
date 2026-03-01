@@ -11,5 +11,5 @@ public record ProductResponseDto(
         BigDecimal basePrice,
         String description,
         Boolean isAvailable
-) {
+) implements ProductDto {
 }

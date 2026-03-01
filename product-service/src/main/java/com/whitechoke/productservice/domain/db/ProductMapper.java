@@ -1,6 +1,6 @@
 package com.whitechoke.productservice.domain.db;
 
-import com.whitechoke.productservice.api.dto.ProductRequestDto;
+import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
 import com.whitechoke.productservice.api.dto.ProductResponseDto;
 import org.mapstruct.Mapper;
 
@@ -12,6 +12,6 @@ import org.mapstruct.ReportingPolicy;
         componentModel = MappingConstants.ComponentModel.SPRING
 )
 public interface ProductMapper {
-    ProductEntity toProductEntity(ProductRequestDto request);
+    ProductEntity toProductEntity(ProductCreateRequestDto request);
     ProductResponseDto toResponseDto(ProductEntity entity);
 }

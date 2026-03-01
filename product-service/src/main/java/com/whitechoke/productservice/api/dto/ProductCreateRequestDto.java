@@ -4,10 +4,10 @@ import com.whitechoke.productservice.domain.db.ProductType;
 
 import java.math.BigDecimal;
 
-public record ProductRequestDto(
+public record ProductCreateRequestDto(
         ProductType productType,
         String name,
         BigDecimal basePrice,
         String description
-) {
+) implements ProductDto {
 }

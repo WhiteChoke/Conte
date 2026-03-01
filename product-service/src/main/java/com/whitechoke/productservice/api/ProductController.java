@@ -1,14 +1,13 @@
 package com.whitechoke.productservice.api;
 
+import com.whitechoke.productservice.api.dto.ProductCreateRequestDto;
 import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
-import com.whitechoke.productservice.api.dto.ProductRequestDto;
 import com.whitechoke.productservice.api.dto.ProductFilterDto;
 import com.whitechoke.productservice.api.dto.ProductResponseDto;
 import com.whitechoke.productservice.api.dto.ProductUpdateRequestDto;
 import com.whitechoke.productservice.domain.ProductService;
 import com.whitechoke.productservice.domain.db.ProductType;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.sql.Update;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -52,7 +51,7 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<ProductResponseDto> createProduct(
-            @RequestBody ProductRequestDto request
+            @RequestBody ProductCreateRequestDto request
     ) {
         var created = service.createProduct(request);
 
