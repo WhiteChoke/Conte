@@ -5,6 +5,7 @@ import com.whitechoke.productservice.api.dto.ProductFilterResponseDto;
 import com.whitechoke.productservice.api.dto.ProductRequestDto;
 import com.whitechoke.productservice.api.dto.ProductResponseDto;
 import com.whitechoke.productservice.domain.ProductService;
+import com.whitechoke.productservice.domain.ProductValidate;
 import com.whitechoke.productservice.domain.db.ProductMapper;
 import com.whitechoke.productservice.domain.db.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository repository;
     private final ProductMapper mapper;
+    private final ProductValidate productValidate;
 
     public ProductFilterResponseDto getProductByFilter(ProductFilterDto filter) {
 
@@ -51,7 +53,11 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     public ProductResponseDto createProduct(ProductRequestDto request) {
 
+        productValidate.validateRequest(request);
+
         var entity = mapper.toProductEntity(request);
+        entity.setIsAvailable(true);
+
         var created = repository.save(entity);
 
         return mapper.toResponseDto(created);
