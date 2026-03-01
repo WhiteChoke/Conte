@@ -1,4 +1,12 @@
 package com.whitechoke.productservice.domain;
 
-public interface VatriantService {
+import com.whitechoke.productservice.api.dto.variantDto.VariantCreateRequestDto;
+import com.whitechoke.productservice.api.dto.variantDto.VariantFilterDto;
+import com.whitechoke.productservice.api.dto.variantDto.VariantFilterResponseDto;
+import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
+
+public interface VariantService {
+    VariantFilterResponseDto getVariantByFilter(VariantFilterDto request);
+    VariantResponseDto createVariant(VariantCreateRequestDto request);
+    void deleteVariant(Long id);
 }
