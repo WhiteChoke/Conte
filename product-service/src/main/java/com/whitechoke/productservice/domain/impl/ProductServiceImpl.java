@@ -6,7 +6,7 @@ import com.whitechoke.productservice.api.dto.productDto.ProductFilterResponseDto
 import com.whitechoke.productservice.api.dto.productDto.ProductResponseDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductUpdateRequestDto;
 import com.whitechoke.productservice.domain.ProductService;
-import com.whitechoke.productservice.domain.ProductValidate;
+import com.whitechoke.productservice.domain.validation.ProductValidate;
 import com.whitechoke.productservice.domain.db.product.ProductMapper;
 import com.whitechoke.productservice.domain.db.product.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;

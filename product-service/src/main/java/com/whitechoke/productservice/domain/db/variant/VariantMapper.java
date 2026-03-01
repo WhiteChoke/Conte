@@ -11,6 +11,7 @@ import org.mapstruct.ReportingPolicy;
         componentModel = MappingConstants.ComponentModel.SPRING
 )
 public interface VariantMapper {
+    // TODO: Implement linking product with entity by product id
     VariantEntity toEntity(VariantCreateRequestDto request);
     VariantResponseDto toResponseDto(VariantEntity entity);
 }
