@@ -1,4 +1,4 @@
-package com.whitechoke.productservice.domain;
+package com.whitechoke.productservice.domain.validation;
 
 import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductDto;
