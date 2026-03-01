@@ -28,18 +28,18 @@ public class ProductEntity {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "product_type")
+    @Column(name = "product_type", nullable = false)
     private ProductType productType;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @Column(name = "base_price")
+    @Column(name = "base_price", nullable = false)
     private BigDecimal basePrice;
 
-    @Column(name = "description")
+    @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "is_available")
+    @Column(name = "is_available", nullable = false)
     private Boolean isAvailable;
 }
