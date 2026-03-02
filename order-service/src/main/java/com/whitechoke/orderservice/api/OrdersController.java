@@ -1,4 +1,4 @@
-package com.whitechoke.orderservice;
+package com.whitechoke.orderservice.api;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;

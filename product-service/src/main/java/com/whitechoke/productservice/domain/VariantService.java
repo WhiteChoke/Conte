@@ -8,5 +8,5 @@ import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
 public interface VariantService {
     VariantFilterResponseDto getVariantByFilter(VariantFilterDto filter);
     VariantResponseDto createVariant(VariantCreateRequestDto request);
-    void deleteVariant(Long id);
+    void deleteVariantById(Long id);
 }

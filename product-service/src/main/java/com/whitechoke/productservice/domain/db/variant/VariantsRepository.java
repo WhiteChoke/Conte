@@ -11,7 +11,7 @@ public interface VariantsRepository extends JpaRepository<VariantEntity, Long> {
         SELECT v FROM VariantEntity v
                 WHERE (:id IS NULL OR v.id = :id)
                 AND (:size IS NULL OR v.size = :size)
-                AND (:productId IS NULL OR v.poduct.id = :productId)
+                AND (:productId IS NULL OR v.product.id = :productId)
         """)
     Page<VariantEntity> getVariantByFilter(@Param("id") Long id,
                                             @Param("size") Integer size,

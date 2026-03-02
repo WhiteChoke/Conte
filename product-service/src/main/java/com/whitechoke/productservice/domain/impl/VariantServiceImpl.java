@@ -5,6 +5,7 @@ import com.whitechoke.productservice.api.dto.variantDto.VariantFilterDto;
 import com.whitechoke.productservice.api.dto.variantDto.VariantFilterResponseDto;
 import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
 import com.whitechoke.productservice.domain.VariantService;
+import com.whitechoke.productservice.domain.db.product.ProductRepository;
 import com.whitechoke.productservice.domain.db.variant.VariantMapper;
 import com.whitechoke.productservice.domain.db.variant.VariantsRepository;
 import com.whitechoke.productservice.domain.validation.VariantValidate;
@@ -21,6 +22,7 @@ public class VariantServiceImpl implements VariantService {
     private final VariantsRepository repository;
     private final VariantMapper mapper;
     private final VariantValidate variantValidate;
+    private final ProductRepository productRepository;
 
     @Override
     public VariantFilterResponseDto getVariantByFilter(VariantFilterDto filter) {
@@ -59,6 +61,10 @@ public class VariantServiceImpl implements VariantService {
         variantValidate.validateRequest(request);
 
         var entity = mapper.toEntity(request);
+        var product = productRepository.findById(request.productId())
+                .orElseThrow(() -> new EntityNotFoundException("Not found product with id=" + request.productId()));
+
+        entity.setProduct(product);
         var created = repository.save(entity);
 
         return mapper.toResponseDto(created);
@@ -66,7 +72,7 @@ public class VariantServiceImpl implements VariantService {
 
     @Override
     @Transactional
-    public void deleteVariant(Long id) {
+    public void deleteVariantById(Long id) {
         var found = repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Not found variant with id=" + id));
 
