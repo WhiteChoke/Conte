@@ -1,4 +1,4 @@
-package com.whitechoke.orderservice.domain.db;
+package com.whitechoke.orderservice.domain.db.order;
 
 public enum OrderStatus {
     PENDING_PAYMENT,
