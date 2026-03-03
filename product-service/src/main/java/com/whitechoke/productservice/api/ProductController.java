@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/v1/products")
@@ -80,5 +82,16 @@ public class ProductController {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(updated);
+    }
+
+    @GetMapping("ids")
+    public ResponseEntity<List<ProductResponseDto>> getProductsByIds(
+            @RequestBody List<Long> ids
+    ) {
+        var found = service.getProductsByIds(ids);
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(found);
     }
 }

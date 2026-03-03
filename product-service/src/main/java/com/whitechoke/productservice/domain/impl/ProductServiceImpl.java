@@ -15,6 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
@@ -89,5 +91,14 @@ public class ProductServiceImpl implements ProductService {
         found.setBasePrice(request.basePrice());
 
         return mapper.toResponseDto(found);
+    }
+
+    @Override
+    public List<ProductResponseDto> getProductsByIds(List<Long> ids) {
+        var found = repository.findAllById(ids);
+        return found
+                .stream()
+                .map(mapper::toResponseDto)
+                .toList();
     }
 }

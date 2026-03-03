@@ -7,9 +7,12 @@ import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductResponseDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductUpdateRequestDto;
 
+import java.util.List;
+
 public interface ProductService {
     ProductFilterResponseDto getProductByFilter(ProductFilterDto filter);
     ProductResponseDto createProduct(ProductCreateRequestDto request);
     void deleteProductById(Long id);
     ProductResponseDto updateProduct(Long id, ProductUpdateRequestDto request);
+    List<ProductResponseDto> getProductsByIds(List<Long> ids);
 }
