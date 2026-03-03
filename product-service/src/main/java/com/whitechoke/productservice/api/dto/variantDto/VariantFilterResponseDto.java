@@ -1,5 +1,6 @@
 package com.whitechoke.productservice.api.dto.variantDto;
 
+import com.whitechoke.api.http.variant.VariantResponseDto;
 import lombok.Builder;
 
 import java.util.List;

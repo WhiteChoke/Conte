@@ -3,7 +3,7 @@ package com.whitechoke.productservice.domain;
 import com.whitechoke.productservice.api.dto.variantDto.VariantCreateRequestDto;
 import com.whitechoke.productservice.api.dto.variantDto.VariantFilterDto;
 import com.whitechoke.productservice.api.dto.variantDto.VariantFilterResponseDto;
-import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
+import com.whitechoke.api.http.variant.VariantResponseDto;
 
 public interface VariantService {
     VariantFilterResponseDto getVariantByFilter(VariantFilterDto filter);

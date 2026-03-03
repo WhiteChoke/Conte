@@ -1,7 +1,7 @@
 package com.whitechoke.productservice.domain.db.variant;
 
 import com.whitechoke.productservice.api.dto.variantDto.VariantCreateRequestDto;
-import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
+import com.whitechoke.api.http.variant.VariantResponseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.ReportingPolicy;

@@ -3,7 +3,7 @@ package com.whitechoke.productservice.api;
 import com.whitechoke.productservice.api.dto.variantDto.VariantCreateRequestDto;
 import com.whitechoke.productservice.api.dto.variantDto.VariantFilterDto;
 import com.whitechoke.productservice.api.dto.variantDto.VariantFilterResponseDto;
-import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
+import com.whitechoke.api.http.variant.VariantResponseDto;
 import com.whitechoke.productservice.domain.VariantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

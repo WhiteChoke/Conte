@@ -1,7 +1,6 @@
-package com.whitechoke.productservice.api.dto.productDto;
+package com.whitechoke.api.http.product;
 
-import com.whitechoke.productservice.api.dto.variantDto.VariantResponseDto;
-import com.whitechoke.productservice.domain.db.product.ProductType;
+import com.whitechoke.api.http.variant.VariantResponseDto;
 
 import java.math.BigDecimal;
 import java.util.List;

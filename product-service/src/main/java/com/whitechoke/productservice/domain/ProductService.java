@@ -1,10 +1,11 @@
 package com.whitechoke.productservice.domain;
 
 
+import com.whitechoke.api.http.product.ProductResponseDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductFilterDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductFilterResponseDto;
 import com.whitechoke.productservice.api.dto.productDto.ProductCreateRequestDto;
-import com.whitechoke.productservice.api.dto.productDto.ProductResponseDto;
+
 import com.whitechoke.productservice.api.dto.productDto.ProductUpdateRequestDto;
 
 import java.util.List;

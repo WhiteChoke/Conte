@@ -1,4 +1,4 @@
-package com.whitechoke.productservice.api.dto.variantDto;
+package com.whitechoke.api.http.variant;
 
 import lombok.Builder;
 

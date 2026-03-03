@@ -1,4 +1,4 @@
-package com.whitechoke.productservice.domain.db.product;
+package com.whitechoke.api.http.product;
 
 public enum ProductType {
     COFFEE,

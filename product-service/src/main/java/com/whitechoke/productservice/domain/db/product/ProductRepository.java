@@ -1,5 +1,6 @@
 package com.whitechoke.productservice.domain.db.product;
 
+import com.whitechoke.api.http.product.ProductType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

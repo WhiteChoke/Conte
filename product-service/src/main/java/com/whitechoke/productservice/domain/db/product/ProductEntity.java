@@ -1,5 +1,6 @@
 package com.whitechoke.productservice.domain.db.product;
 
+import com.whitechoke.api.http.product.ProductType;
 import com.whitechoke.productservice.domain.db.variant.VariantEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
