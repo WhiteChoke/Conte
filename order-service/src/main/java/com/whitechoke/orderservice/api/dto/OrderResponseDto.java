@@ -5,7 +5,7 @@ import com.whitechoke.orderservice.domain.db.order.OrderStatus;
 import java.math.BigDecimal;
 import java.time.Instant;
 
-public record OrderResponsetDto(
+public record OrderResponseDto(
         Long id,
         String customerPhone,
         String customerName,
