@@ -44,4 +44,11 @@ public class OrderItemEntity {
     @Column(name = "unit_price")
     private BigDecimal unitPrice;
 
+    public OrderItemEntity(OrderEntity order, Long variantId, Long productId, Integer quantity, BigDecimal unitPrice) {
+        this.order = order;
+        this.variantId = variantId;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+    }
 }

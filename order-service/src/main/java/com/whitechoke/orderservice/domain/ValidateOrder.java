@@ -23,8 +23,8 @@ public class ValidateOrder {
         if (request.deliveryType() == null){
             throw new NullArgumentException("Delivery type cannot be null");
         }
-        if (request.productIds().isEmpty()) {
-            throw new IllegalArgumentException("Picked products cannot be empty");
+        if (request.orderItemCreateRequestDtoList() == null) {
+            throw new IllegalArgumentException("Picked items cannot be empty");
         }
     }
 }

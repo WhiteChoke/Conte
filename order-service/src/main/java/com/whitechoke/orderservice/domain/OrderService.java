@@ -1,8 +1,8 @@
 package com.whitechoke.orderservice.domain;
 
 import com.whitechoke.orderservice.api.dto.OrderCreateRequestDto;
-import com.whitechoke.orderservice.api.dto.OrderResponsetDto;
+import com.whitechoke.orderservice.api.dto.OrderResponseDto;
 
 public interface OrderService  {
-    OrderResponsetDto createOrder(OrderCreateRequestDto request);
+    OrderResponseDto createOrder(OrderCreateRequestDto request);
 }
