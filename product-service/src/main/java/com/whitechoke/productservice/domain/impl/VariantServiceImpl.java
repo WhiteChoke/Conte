@@ -15,6 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class VariantServiceImpl implements VariantService {
@@ -77,5 +79,14 @@ public class VariantServiceImpl implements VariantService {
                 .orElseThrow(() -> new EntityNotFoundException("Not found variant with id=" + id));
 
         repository.delete(found);
+    }
+
+    @Override
+    public List<VariantResponseDto> getVariantsByIds(List<Long> ids) {
+        var found = repository.findAllById(ids);
+        return found
+                .stream()
+                .map(mapper::toResponseDto)
+                .toList();
     }
 }

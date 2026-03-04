@@ -1,7 +1,5 @@
 package com.whitechoke.api.http.product;
 
-import com.whitechoke.api.http.variant.VariantResponseDto;
-
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -12,6 +10,6 @@ public record ProductResponseDto(
         BigDecimal basePrice,
         String description,
         Boolean isAvailable,
-        List<VariantResponseDto> variants
+        List<Long> variantsId
 ) implements ProductDto {
 }

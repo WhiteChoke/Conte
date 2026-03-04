@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/v1/variants")
@@ -65,5 +67,16 @@ public class VariantController {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .build();
+    }
+
+    @GetMapping("ids")
+    public ResponseEntity<List<VariantResponseDto>> getProductsByIds(
+            @RequestBody List<Long> ids
+    ) {
+        var found = service.getVariantsByIds(ids);
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(found);
     }
 }

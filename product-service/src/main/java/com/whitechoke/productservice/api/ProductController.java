@@ -83,15 +83,4 @@ public class ProductController {
                 .status(HttpStatus.OK)
                 .body(updated);
     }
-
-    @GetMapping("ids")
-    public ResponseEntity<List<ProductResponseDto>> getProductsByIds(
-            @RequestBody List<Long> ids
-    ) {
-        var found = service.getProductsByIds(ids);
-
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(found);
-    }
 }
