@@ -8,6 +8,6 @@ public record OrderCreateRequestDto(
         String customerPhone,
         String customerName,
         DeliveryType deliveryType,
-        List<Long> productIds
+        List<OrderItemCreateRequestDto> orderItemCreateRequestDtoList
 ) {
 }

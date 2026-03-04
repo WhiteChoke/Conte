@@ -1,4 +1,7 @@
 package com.whitechoke.orderservice.api.dto;
 
-public record OrderItemCreateRequsetDto() {
+public record OrderItemCreateRequestDto(
+        Long variantId,
+        Integer quantity
+) {
 }
