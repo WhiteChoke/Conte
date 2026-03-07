@@ -13,6 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 @Getter
@@ -29,6 +30,9 @@ public class PaymentEntity {
 
     @Column(name = "order_id", nullable = false)
     private Long orderId;
+
+    @Column(name = "amount", nullable = false)
+    private BigDecimal amount;
 
     @Column(name = "payment_method", nullable = false)
     private PaymentMethod paymentMethod;

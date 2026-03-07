@@ -49,6 +49,7 @@ public class PaymentServiceImpl implements PaymentService {
                 .nextLong()
         );
         entity.setPaymentStatus(status);
+        entity.setAmount(request.amount());
 
         var created = repository.save(entity);
 
