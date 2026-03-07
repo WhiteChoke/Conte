@@ -10,8 +10,16 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+  kafka:
+    consumer:
+      group-id: order-service-group
+    bootstrap-servers: localhost:9092
 server:
   port: 8081
 
 http-url:
   product-service: http://localhost:8080
+  payment-service: http://localhost:8082
+
+order-paid-topic: orders.events
+delivery-assigned-topic: delivery.events

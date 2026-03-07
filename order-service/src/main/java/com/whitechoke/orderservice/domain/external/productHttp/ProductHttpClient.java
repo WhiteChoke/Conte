@@ -1,4 +1,4 @@
-package com.whitechoke.orderservice.domain.external;
+package com.whitechoke.orderservice.domain.external.productHttp;
 
 import com.whitechoke.api.http.variant.VariantResponseDto;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,4 @@
-package com.whitechoke.orderservice.domain.external;
+package com.whitechoke.orderservice.domain.external.productHttp;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
