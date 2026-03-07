@@ -40,5 +40,5 @@ public class PaymentEntity {
     private Long transactionalId;
 
     @Column(name = "paid_at", nullable = false)
-    private Instant paidAt;
+    private Instant createdAt;
 }

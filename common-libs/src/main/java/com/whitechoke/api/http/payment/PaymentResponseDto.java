@@ -8,6 +8,6 @@ public record PaymentResponseDto(
         PaymentMethod paymentMethod,
         PaymentStatus paymentStatus,
         Long transactionalId,
-        Instant paidAt
+        Instant createdAt
 ) {
 }
